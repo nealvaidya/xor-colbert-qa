@@ -90,13 +90,13 @@ def write_translations(translated_data_by_language, path):
 
 def main():
     # xor_dev_by_lang = read_xor_data("../data/eval/mia_2022_dev_xorqa.jsonl")
-    xor_dev_by_lang = read_xor_data("../../final/data/eval/mia_2022_dev_xorqa.jsonl")
+    xor_dev_by_lang = read_xor_data("../final/data/eval/mia_2022_dev_xorqa.jsonl")
     translate_all(xor_dev_by_lang)
     write_translations(xor_dev_by_lang, "../data/queries_translated.tsv")
 
     mkqa_langs = ["ar", "en", "es", "fi", "ja", "km", "ko", "ru", "sv", "tr", "zh_cn"]
     # mkqa_dev_by_lang = read_mkqa_data("../data/eval/mkqa_dev", languages=mkqa_langs)
-    mkqa_dev_by_lang = read_mkqa_data("../../final/data/eval/mkqa_dev", languages=mkqa_langs)
+    mkqa_dev_by_lang = read_mkqa_data("../final/data/eval/mkqa_dev", languages=mkqa_langs)
     translate_all(mkqa_dev_by_lang)
     write_translations(mkqa_dev_by_lang, "../data/mkqa_queries_translated.tsv")
 
